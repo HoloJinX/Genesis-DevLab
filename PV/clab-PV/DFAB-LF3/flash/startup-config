@@ -1,0 +1,44 @@
+! Startup-config last modified at Fri May 31 23:58:50 2024 by root
+! device: DFAB-LF3 (cEOSLab, EOS-4.31.3M-36737551.4313M (engineering build))
+!
+no aaa root
+!
+username admin privilege 15 role network-admin secret sha512 $6$8gbkSVrEHejXBBZ7$LbN9fAQqpNWoX7B7e4Mqfq.nSpubzayA4m1h83L8HFz8DIu6e7gJQcCOkgil7a96709SsJg.TD68heelxzy4G.
+!
+transceiver qsfp default-mode 4x10G
+!
+service routing protocols model multi-agent
+!
+hostname DFAB-LF3
+!
+spanning-tree mode mstp
+!
+system l1
+   unsupported speed action error
+   unsupported error-correction action error
+!
+management api http-commands
+   no shutdown
+!
+management api gnmi
+   transport grpc default
+!
+management api netconf
+   transport ssh default
+!
+interface Ethernet11
+!
+interface Ethernet12
+!
+interface Ethernet251
+!
+interface Ethernet252
+!
+interface Management0
+   ip address 10.1.1.23/12
+!
+no ip routing
+!
+ip route 0.0.0.0/0 10.0.0.1
+!
+end

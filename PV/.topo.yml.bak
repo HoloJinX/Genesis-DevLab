@@ -1,0 +1,108 @@
+name: PV
+
+mgmt:
+  network: mgmt
+  ipv4-subnet: 10.0.0.0/12
+
+topology:
+  nodes:
+# CORE Ps
+    DCOR-P1:
+      kind: arista_ceos
+      image: ceos:4.31.3M
+      mgmt-ipv4: 10.1.0.1
+    DCOR-P2:
+      kind: arista_ceos
+      image: ceos:4.31.3M
+      mgmt-ipv4: 10.1.0.2
+    VCOR-P3:
+      kind: arista_ceos
+      image: ceos:4.31.3M
+      mgmt-ipv4: 10.1.0.3
+    VCOR-P4:
+      kind: arista_ceos
+      image: ceos:4.31.3M
+      mgmt-ipv4: 10.1.0.4
+
+# D CORE PEs
+    DCOR-PE1:
+      kind: arista_ceos
+      image: ceos:4.31.3M
+      mgmt-ipv4: 10.1.0.11
+    DCOR-PE2:
+      kind: arista_ceos
+      image: ceos:4.31.3M
+      mgmt-ipv4: 10.1.0.12
+      
+# D EDGE FABRIC
+    DFAB-SP1:
+      kind: arista_ceos
+      image: ceos:4.31.3M
+      mgmt-ipv4: 10.1.1.251
+    DFAB-SP2:
+      kind: arista_ceos
+      image: ceos:4.31.3M
+      mgmt-ipv4: 10.1.1.252
+    DFAB-IR1:
+      kind: arista_ceos
+      image: ceos:4.31.3M
+      mgmt-ipv4: 10.1.1.21
+    DFAB-IR2:
+      kind: arista_ceos
+      image: ceos:4.31.3M
+      mgmt-ipv4: 10.1.1.22
+    DFAB-LF3:
+      kind: arista_ceos
+      image: ceos:4.31.3M
+      mgmt-ipv4: 10.1.1.23
+    DFAB-LF4:
+      kind: arista_ceos
+      image: ceos:4.31.3M
+      mgmt-ipv4: 10.1.1.24
+
+# D WAN EDGE
+    DWAN-WR1:
+      kind: arista_ceos
+      image: ceos:4.31.3M
+      mgmt-ipv4: 10.1.2.101
+    DWAN-WR2:
+      kind: arista_ceos
+      image: ceos:4.31.3M
+      mgmt-ipv4: 10.1.2.102
+
+  links:
+
+# DCOR P to VCOR P
+    - endpoints: ["DCOR-P1:eth3", "VCOR-P3:eth1"]
+    - endpoints: ["DCOR-P1:eth4", "VCOR-P4:eth1"]
+    - endpoints: ["DCOR-P2:eth3", "VCOR-P3:eth2"]
+    - endpoints: ["DCOR-P2:eth4", "VCOR-P4:eth2"]
+
+
+# DCOR P to DCOR PE
+    - endpoints: ["DCOR-P1:eth11", "DCOR-PE1:eth1"]
+    - endpoints: ["DCOR-P1:eth12", "DCOR-PE2:eth1"]
+    - endpoints: ["DCOR-P2:eth11", "DCOR-PE1:eth2"]
+    - endpoints: ["DCOR-P2:eth12", "DCOR-PE2:eth2"]
+
+# DCOR PE to DFAB
+    - endpoints: ["DCOR-PE1:eth23", "DFAB-LF3:eth11"]
+    - endpoints: ["DCOR-PE1:eth24", "DFAB-LF4:eth11"]
+    - endpoints: ["DCOR-PE2:eth23", "DFAB-LF3:eth12"]
+    - endpoints: ["DCOR-PE2:eth24", "DFAB-LF4:eth12"]
+
+# DFAB to DFAB
+    - endpoints: ["DFAB-SP1:eth21", "DFAB-IR1:eth251"]
+    - endpoints: ["DFAB-SP1:eth22", "DFAB-IR2:eth251"]
+    - endpoints: ["DFAB-SP1:eth23", "DFAB-LF3:eth251"]
+    - endpoints: ["DFAB-SP1:eth24", "DFAB-LF4:eth251"]
+    - endpoints: ["DFAB-SP2:eth21", "DFAB-IR1:eth252"]
+    - endpoints: ["DFAB-SP2:eth22", "DFAB-IR2:eth252"]
+    - endpoints: ["DFAB-SP2:eth23", "DFAB-LF3:eth252"]
+    - endpoints: ["DFAB-SP2:eth24", "DFAB-LF4:eth252"]
+
+# DFAB to DWAN
+    - endpoints: ["DFAB-IR1:eth101", "DWAN-WR1:eth21"]
+    - endpoints: ["DFAB-IR1:eth102", "DWAN-WR2:eth21"]
+    - endpoints: ["DFAB-IR2:eth101", "DWAN-WR1:eth22"]
+    - endpoints: ["DFAB-IR2:eth102", "DWAN-WR2:eth22"]

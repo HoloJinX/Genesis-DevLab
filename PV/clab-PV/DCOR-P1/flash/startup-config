@@ -1,0 +1,44 @@
+! Startup-config last modified at Fri May 31 23:58:15 2024 by root
+! device: DCOR-P1 (cEOSLab, EOS-4.31.3M-36737551.4313M (engineering build))
+!
+no aaa root
+!
+username admin privilege 15 role network-admin secret sha512 $6$E.eM1vWvLbbOLEK1$tjfNu8eOn0LIlyMCQ4pCreWZ3o7noFFJDaVBDPFvgUyrMdAENC1jPZT5y60RLkSsdPwIw04A7xUsdOAlBsIXt/
+!
+transceiver qsfp default-mode 4x10G
+!
+service routing protocols model multi-agent
+!
+hostname DCOR-P1
+!
+spanning-tree mode mstp
+!
+system l1
+   unsupported speed action error
+   unsupported error-correction action error
+!
+management api http-commands
+   no shutdown
+!
+management api gnmi
+   transport grpc default
+!
+management api netconf
+   transport ssh default
+!
+interface Ethernet3
+!
+interface Ethernet4
+!
+interface Ethernet11
+!
+interface Ethernet12
+!
+interface Management0
+   ip address 10.1.0.1/12
+!
+no ip routing
+!
+ip route 0.0.0.0/0 10.0.0.1
+!
+end

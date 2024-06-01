@@ -1,0 +1,40 @@
+! Startup-config last modified at Fri May 31 23:57:59 2024 by root
+! device: DWAN-WR2 (cEOSLab, EOS-4.31.3M-36737551.4313M (engineering build))
+!
+no aaa root
+!
+username admin privilege 15 role network-admin secret sha512 $6$ocKnmXFwJ6DsrLhN$.CESNJ4XLbTJ7xsji0bqVq3Anrl.V1.8zUwXRrDC5iqOpr7FhfpbVTNBfXx2/E.Sdg7YCNco8KoUOSoiIJlAw0
+!
+transceiver qsfp default-mode 4x10G
+!
+service routing protocols model multi-agent
+!
+hostname DWAN-WR2
+!
+spanning-tree mode mstp
+!
+system l1
+   unsupported speed action error
+   unsupported error-correction action error
+!
+management api http-commands
+   no shutdown
+!
+management api gnmi
+   transport grpc default
+!
+management api netconf
+   transport ssh default
+!
+interface Ethernet21
+!
+interface Ethernet22
+!
+interface Management0
+   ip address 10.1.2.102/12
+!
+no ip routing
+!
+ip route 0.0.0.0/0 10.0.0.1
+!
+end

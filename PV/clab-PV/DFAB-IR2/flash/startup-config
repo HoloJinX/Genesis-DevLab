@@ -1,0 +1,44 @@
+! Startup-config last modified at Fri May 31 23:57:46 2024 by root
+! device: DFAB-IR2 (cEOSLab, EOS-4.31.3M-36737551.4313M (engineering build))
+!
+no aaa root
+!
+username admin privilege 15 role network-admin secret sha512 $6$HD.IJBhIZ.erTkJ4$mvY1Ow36oRHHjyn8YKpgSMckAkSk.drMd1lEhoFw3IBT9PC5XjwrKrM/7o1V9xeCqvPsqbOHLL8Z1KzTnBjIL.
+!
+transceiver qsfp default-mode 4x10G
+!
+service routing protocols model multi-agent
+!
+hostname DFAB-IR2
+!
+spanning-tree mode mstp
+!
+system l1
+   unsupported speed action error
+   unsupported error-correction action error
+!
+management api http-commands
+   no shutdown
+!
+management api gnmi
+   transport grpc default
+!
+management api netconf
+   transport ssh default
+!
+interface Ethernet101
+!
+interface Ethernet102
+!
+interface Ethernet251
+!
+interface Ethernet252
+!
+interface Management0
+   ip address 10.1.1.22/12
+!
+no ip routing
+!
+ip route 0.0.0.0/0 10.0.0.1
+!
+end
