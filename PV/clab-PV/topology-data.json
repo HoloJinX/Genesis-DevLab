@@ -6,7 +6,7 @@
       "prefix": "clab",
       "mgmt": {
         "network": "mgmt",
-        "bridge": "br-6a4ce77d07de",
+        "bridge": "br-7fc744414737",
         "ipv4-subnet": "10.0.0.0/12",
         "ipv4-gw": "10.0.0.1",
         "mtu": 1500,
@@ -15,129 +15,13 @@
     }
   },
   "nodes": {
-    "DCOR-P1": {
+    "Edge1-IR1": {
       "index": "0",
-      "shortname": "DCOR-P1",
-      "longname": "clab-PV-DCOR-P1",
-      "fqdn": "DCOR-P1.PV.io",
+      "shortname": "Edge1-IR1",
+      "longname": "clab-PV-Edge1-IR1",
+      "fqdn": "Edge1-IR1.PV.io",
       "group": "",
-      "labdir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/DCOR-P1",
-      "kind": "arista_ceos",
-      "image": "ceos:4.31.3M",
-      "mgmt-net": "",
-      "mgmt-intf": "Management0",
-      "mgmt-ipv4-address": "10.1.0.1",
-      "mgmt-ipv4-prefix-length": 12,
-      "mgmt-ipv6-address": "",
-      "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "00:1c:73:4c:b8:c5",
-      "labels": {
-        "clab-mgmt-net-bridge": "br-6a4ce77d07de",
-        "clab-node-group": "",
-        "clab-node-kind": "arista_ceos",
-        "clab-node-lab-dir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/DCOR-P1",
-        "clab-node-name": "DCOR-P1",
-        "clab-node-type": "",
-        "clab-topo-file": "/home/holojinx/containerlab/Genesis-DevLab/PV/topo.yml",
-        "containerlab": "PV"
-      },
-      "port-bindings": [
-      ]
-    },
-    "DCOR-P2": {
-      "index": "1",
-      "shortname": "DCOR-P2",
-      "longname": "clab-PV-DCOR-P2",
-      "fqdn": "DCOR-P2.PV.io",
-      "group": "",
-      "labdir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/DCOR-P2",
-      "kind": "arista_ceos",
-      "image": "ceos:4.31.3M",
-      "mgmt-net": "",
-      "mgmt-intf": "Management0",
-      "mgmt-ipv4-address": "10.1.0.2",
-      "mgmt-ipv4-prefix-length": 12,
-      "mgmt-ipv6-address": "",
-      "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "00:1c:73:7d:e3:aa",
-      "labels": {
-        "clab-mgmt-net-bridge": "br-6a4ce77d07de",
-        "clab-node-group": "",
-        "clab-node-kind": "arista_ceos",
-        "clab-node-lab-dir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/DCOR-P2",
-        "clab-node-name": "DCOR-P2",
-        "clab-node-type": "",
-        "clab-topo-file": "/home/holojinx/containerlab/Genesis-DevLab/PV/topo.yml",
-        "containerlab": "PV"
-      },
-      "port-bindings": [
-      ]
-    },
-    "DCOR-PE1": {
-      "index": "2",
-      "shortname": "DCOR-PE1",
-      "longname": "clab-PV-DCOR-PE1",
-      "fqdn": "DCOR-PE1.PV.io",
-      "group": "",
-      "labdir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/DCOR-PE1",
-      "kind": "arista_ceos",
-      "image": "ceos:4.31.3M",
-      "mgmt-net": "",
-      "mgmt-intf": "Management0",
-      "mgmt-ipv4-address": "10.1.0.11",
-      "mgmt-ipv4-prefix-length": 12,
-      "mgmt-ipv6-address": "",
-      "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "00:1c:73:33:1e:39",
-      "labels": {
-        "clab-mgmt-net-bridge": "br-6a4ce77d07de",
-        "clab-node-group": "",
-        "clab-node-kind": "arista_ceos",
-        "clab-node-lab-dir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/DCOR-PE1",
-        "clab-node-name": "DCOR-PE1",
-        "clab-node-type": "",
-        "clab-topo-file": "/home/holojinx/containerlab/Genesis-DevLab/PV/topo.yml",
-        "containerlab": "PV"
-      },
-      "port-bindings": [
-      ]
-    },
-    "DCOR-PE2": {
-      "index": "3",
-      "shortname": "DCOR-PE2",
-      "longname": "clab-PV-DCOR-PE2",
-      "fqdn": "DCOR-PE2.PV.io",
-      "group": "",
-      "labdir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/DCOR-PE2",
-      "kind": "arista_ceos",
-      "image": "ceos:4.31.3M",
-      "mgmt-net": "",
-      "mgmt-intf": "Management0",
-      "mgmt-ipv4-address": "10.1.0.12",
-      "mgmt-ipv4-prefix-length": 12,
-      "mgmt-ipv6-address": "",
-      "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "00:1c:73:56:2f:1c",
-      "labels": {
-        "clab-mgmt-net-bridge": "br-6a4ce77d07de",
-        "clab-node-group": "",
-        "clab-node-kind": "arista_ceos",
-        "clab-node-lab-dir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/DCOR-PE2",
-        "clab-node-name": "DCOR-PE2",
-        "clab-node-type": "",
-        "clab-topo-file": "/home/holojinx/containerlab/Genesis-DevLab/PV/topo.yml",
-        "containerlab": "PV"
-      },
-      "port-bindings": [
-      ]
-    },
-    "DFAB-IR1": {
-      "index": "4",
-      "shortname": "DFAB-IR1",
-      "longname": "clab-PV-DFAB-IR1",
-      "fqdn": "DFAB-IR1.PV.io",
-      "group": "",
-      "labdir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/DFAB-IR1",
+      "labdir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/Edge1-IR1",
       "kind": "arista_ceos",
       "image": "ceos:4.31.3M",
       "mgmt-net": "",
@@ -146,13 +30,13 @@
       "mgmt-ipv4-prefix-length": 12,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "00:1c:73:d0:a6:fd",
+      "mac-address": "00:1c:73:50:75:0c",
       "labels": {
-        "clab-mgmt-net-bridge": "br-6a4ce77d07de",
+        "clab-mgmt-net-bridge": "br-7fc744414737",
         "clab-node-group": "",
         "clab-node-kind": "arista_ceos",
-        "clab-node-lab-dir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/DFAB-IR1",
-        "clab-node-name": "DFAB-IR1",
+        "clab-node-lab-dir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/Edge1-IR1",
+        "clab-node-name": "Edge1-IR1",
         "clab-node-type": "",
         "clab-topo-file": "/home/holojinx/containerlab/Genesis-DevLab/PV/topo.yml",
         "containerlab": "PV"
@@ -160,13 +44,13 @@
       "port-bindings": [
       ]
     },
-    "DFAB-IR2": {
-      "index": "5",
-      "shortname": "DFAB-IR2",
-      "longname": "clab-PV-DFAB-IR2",
-      "fqdn": "DFAB-IR2.PV.io",
+    "Edge1-IR2": {
+      "index": "1",
+      "shortname": "Edge1-IR2",
+      "longname": "clab-PV-Edge1-IR2",
+      "fqdn": "Edge1-IR2.PV.io",
       "group": "",
-      "labdir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/DFAB-IR2",
+      "labdir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/Edge1-IR2",
       "kind": "arista_ceos",
       "image": "ceos:4.31.3M",
       "mgmt-net": "",
@@ -175,13 +59,13 @@
       "mgmt-ipv4-prefix-length": 12,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "00:1c:73:f7:7f:e5",
+      "mac-address": "00:1c:73:e9:1a:04",
       "labels": {
-        "clab-mgmt-net-bridge": "br-6a4ce77d07de",
+        "clab-mgmt-net-bridge": "br-7fc744414737",
         "clab-node-group": "",
         "clab-node-kind": "arista_ceos",
-        "clab-node-lab-dir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/DFAB-IR2",
-        "clab-node-name": "DFAB-IR2",
+        "clab-node-lab-dir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/Edge1-IR2",
+        "clab-node-name": "Edge1-IR2",
         "clab-node-type": "",
         "clab-topo-file": "/home/holojinx/containerlab/Genesis-DevLab/PV/topo.yml",
         "containerlab": "PV"
@@ -189,13 +73,13 @@
       "port-bindings": [
       ]
     },
-    "DFAB-LF3": {
-      "index": "6",
-      "shortname": "DFAB-LF3",
-      "longname": "clab-PV-DFAB-LF3",
-      "fqdn": "DFAB-LF3.PV.io",
+    "Edge1-LF3": {
+      "index": "2",
+      "shortname": "Edge1-LF3",
+      "longname": "clab-PV-Edge1-LF3",
+      "fqdn": "Edge1-LF3.PV.io",
       "group": "",
-      "labdir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/DFAB-LF3",
+      "labdir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/Edge1-LF3",
       "kind": "arista_ceos",
       "image": "ceos:4.31.3M",
       "mgmt-net": "",
@@ -204,13 +88,13 @@
       "mgmt-ipv4-prefix-length": 12,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "00:1c:73:73:fd:47",
+      "mac-address": "00:1c:73:93:5f:c9",
       "labels": {
-        "clab-mgmt-net-bridge": "br-6a4ce77d07de",
+        "clab-mgmt-net-bridge": "br-7fc744414737",
         "clab-node-group": "",
         "clab-node-kind": "arista_ceos",
-        "clab-node-lab-dir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/DFAB-LF3",
-        "clab-node-name": "DFAB-LF3",
+        "clab-node-lab-dir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/Edge1-LF3",
+        "clab-node-name": "Edge1-LF3",
         "clab-node-type": "",
         "clab-topo-file": "/home/holojinx/containerlab/Genesis-DevLab/PV/topo.yml",
         "containerlab": "PV"
@@ -218,13 +102,13 @@
       "port-bindings": [
       ]
     },
-    "DFAB-LF4": {
-      "index": "7",
-      "shortname": "DFAB-LF4",
-      "longname": "clab-PV-DFAB-LF4",
-      "fqdn": "DFAB-LF4.PV.io",
+    "Edge1-LF4": {
+      "index": "3",
+      "shortname": "Edge1-LF4",
+      "longname": "clab-PV-Edge1-LF4",
+      "fqdn": "Edge1-LF4.PV.io",
       "group": "",
-      "labdir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/DFAB-LF4",
+      "labdir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/Edge1-LF4",
       "kind": "arista_ceos",
       "image": "ceos:4.31.3M",
       "mgmt-net": "",
@@ -233,13 +117,13 @@
       "mgmt-ipv4-prefix-length": 12,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "00:1c:73:8b:f7:07",
+      "mac-address": "00:1c:73:44:cc:f5",
       "labels": {
-        "clab-mgmt-net-bridge": "br-6a4ce77d07de",
+        "clab-mgmt-net-bridge": "br-7fc744414737",
         "clab-node-group": "",
         "clab-node-kind": "arista_ceos",
-        "clab-node-lab-dir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/DFAB-LF4",
-        "clab-node-name": "DFAB-LF4",
+        "clab-node-lab-dir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/Edge1-LF4",
+        "clab-node-name": "Edge1-LF4",
         "clab-node-type": "",
         "clab-topo-file": "/home/holojinx/containerlab/Genesis-DevLab/PV/topo.yml",
         "containerlab": "PV"
@@ -247,13 +131,129 @@
       "port-bindings": [
       ]
     },
-    "DFAB-SP1": {
-      "index": "8",
-      "shortname": "DFAB-SP1",
-      "longname": "clab-PV-DFAB-SP1",
-      "fqdn": "DFAB-SP1.PV.io",
+    "Edge1-P1": {
+      "index": "4",
+      "shortname": "Edge1-P1",
+      "longname": "clab-PV-Edge1-P1",
+      "fqdn": "Edge1-P1.PV.io",
       "group": "",
-      "labdir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/DFAB-SP1",
+      "labdir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/Edge1-P1",
+      "kind": "arista_ceos",
+      "image": "ceos:4.31.3M",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "10.1.0.1",
+      "mgmt-ipv4-prefix-length": 12,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:37:96:ad",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-7fc744414737",
+        "clab-node-group": "",
+        "clab-node-kind": "arista_ceos",
+        "clab-node-lab-dir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/Edge1-P1",
+        "clab-node-name": "Edge1-P1",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/holojinx/containerlab/Genesis-DevLab/PV/topo.yml",
+        "containerlab": "PV"
+      },
+      "port-bindings": [
+      ]
+    },
+    "Edge1-P2": {
+      "index": "5",
+      "shortname": "Edge1-P2",
+      "longname": "clab-PV-Edge1-P2",
+      "fqdn": "Edge1-P2.PV.io",
+      "group": "",
+      "labdir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/Edge1-P2",
+      "kind": "arista_ceos",
+      "image": "ceos:4.31.3M",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "10.1.0.2",
+      "mgmt-ipv4-prefix-length": 12,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:59:7c:d2",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-7fc744414737",
+        "clab-node-group": "",
+        "clab-node-kind": "arista_ceos",
+        "clab-node-lab-dir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/Edge1-P2",
+        "clab-node-name": "Edge1-P2",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/holojinx/containerlab/Genesis-DevLab/PV/topo.yml",
+        "containerlab": "PV"
+      },
+      "port-bindings": [
+      ]
+    },
+    "Edge1-PE1": {
+      "index": "6",
+      "shortname": "Edge1-PE1",
+      "longname": "clab-PV-Edge1-PE1",
+      "fqdn": "Edge1-PE1.PV.io",
+      "group": "",
+      "labdir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/Edge1-PE1",
+      "kind": "arista_ceos",
+      "image": "ceos:4.31.3M",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "10.1.0.11",
+      "mgmt-ipv4-prefix-length": 12,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:48:d8:1b",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-7fc744414737",
+        "clab-node-group": "",
+        "clab-node-kind": "arista_ceos",
+        "clab-node-lab-dir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/Edge1-PE1",
+        "clab-node-name": "Edge1-PE1",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/holojinx/containerlab/Genesis-DevLab/PV/topo.yml",
+        "containerlab": "PV"
+      },
+      "port-bindings": [
+      ]
+    },
+    "Edge1-PE2": {
+      "index": "7",
+      "shortname": "Edge1-PE2",
+      "longname": "clab-PV-Edge1-PE2",
+      "fqdn": "Edge1-PE2.PV.io",
+      "group": "",
+      "labdir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/Edge1-PE2",
+      "kind": "arista_ceos",
+      "image": "ceos:4.31.3M",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "10.1.0.12",
+      "mgmt-ipv4-prefix-length": 12,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:92:a8:fd",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-7fc744414737",
+        "clab-node-group": "",
+        "clab-node-kind": "arista_ceos",
+        "clab-node-lab-dir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/Edge1-PE2",
+        "clab-node-name": "Edge1-PE2",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/holojinx/containerlab/Genesis-DevLab/PV/topo.yml",
+        "containerlab": "PV"
+      },
+      "port-bindings": [
+      ]
+    },
+    "Edge1-SP1": {
+      "index": "8",
+      "shortname": "Edge1-SP1",
+      "longname": "clab-PV-Edge1-SP1",
+      "fqdn": "Edge1-SP1.PV.io",
+      "group": "",
+      "labdir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/Edge1-SP1",
       "kind": "arista_ceos",
       "image": "ceos:4.31.3M",
       "mgmt-net": "",
@@ -262,13 +262,13 @@
       "mgmt-ipv4-prefix-length": 12,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "00:1c:73:71:95:1e",
+      "mac-address": "00:1c:73:c6:03:25",
       "labels": {
-        "clab-mgmt-net-bridge": "br-6a4ce77d07de",
+        "clab-mgmt-net-bridge": "br-7fc744414737",
         "clab-node-group": "",
         "clab-node-kind": "arista_ceos",
-        "clab-node-lab-dir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/DFAB-SP1",
-        "clab-node-name": "DFAB-SP1",
+        "clab-node-lab-dir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/Edge1-SP1",
+        "clab-node-name": "Edge1-SP1",
         "clab-node-type": "",
         "clab-topo-file": "/home/holojinx/containerlab/Genesis-DevLab/PV/topo.yml",
         "containerlab": "PV"
@@ -276,13 +276,13 @@
       "port-bindings": [
       ]
     },
-    "DFAB-SP2": {
+    "Edge1-SP2": {
       "index": "9",
-      "shortname": "DFAB-SP2",
-      "longname": "clab-PV-DFAB-SP2",
-      "fqdn": "DFAB-SP2.PV.io",
+      "shortname": "Edge1-SP2",
+      "longname": "clab-PV-Edge1-SP2",
+      "fqdn": "Edge1-SP2.PV.io",
       "group": "",
-      "labdir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/DFAB-SP2",
+      "labdir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/Edge1-SP2",
       "kind": "arista_ceos",
       "image": "ceos:4.31.3M",
       "mgmt-net": "",
@@ -291,13 +291,13 @@
       "mgmt-ipv4-prefix-length": 12,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "00:1c:73:1c:93:35",
+      "mac-address": "00:1c:73:b6:e1:bf",
       "labels": {
-        "clab-mgmt-net-bridge": "br-6a4ce77d07de",
+        "clab-mgmt-net-bridge": "br-7fc744414737",
         "clab-node-group": "",
         "clab-node-kind": "arista_ceos",
-        "clab-node-lab-dir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/DFAB-SP2",
-        "clab-node-name": "DFAB-SP2",
+        "clab-node-lab-dir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/Edge1-SP2",
+        "clab-node-name": "Edge1-SP2",
         "clab-node-type": "",
         "clab-topo-file": "/home/holojinx/containerlab/Genesis-DevLab/PV/topo.yml",
         "containerlab": "PV"
@@ -305,13 +305,13 @@
       "port-bindings": [
       ]
     },
-    "DWAN-WR1": {
+    "Edge1-WR1": {
       "index": "10",
-      "shortname": "DWAN-WR1",
-      "longname": "clab-PV-DWAN-WR1",
-      "fqdn": "DWAN-WR1.PV.io",
+      "shortname": "Edge1-WR1",
+      "longname": "clab-PV-Edge1-WR1",
+      "fqdn": "Edge1-WR1.PV.io",
       "group": "",
-      "labdir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/DWAN-WR1",
+      "labdir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/Edge1-WR1",
       "kind": "arista_ceos",
       "image": "ceos:4.31.3M",
       "mgmt-net": "",
@@ -320,13 +320,13 @@
       "mgmt-ipv4-prefix-length": 12,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "00:1c:73:85:8c:46",
+      "mac-address": "00:1c:73:22:cf:1d",
       "labels": {
-        "clab-mgmt-net-bridge": "br-6a4ce77d07de",
+        "clab-mgmt-net-bridge": "br-7fc744414737",
         "clab-node-group": "",
         "clab-node-kind": "arista_ceos",
-        "clab-node-lab-dir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/DWAN-WR1",
-        "clab-node-name": "DWAN-WR1",
+        "clab-node-lab-dir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/Edge1-WR1",
+        "clab-node-name": "Edge1-WR1",
         "clab-node-type": "",
         "clab-topo-file": "/home/holojinx/containerlab/Genesis-DevLab/PV/topo.yml",
         "containerlab": "PV"
@@ -334,13 +334,13 @@
       "port-bindings": [
       ]
     },
-    "DWAN-WR2": {
+    "Edge1-WR2": {
       "index": "11",
-      "shortname": "DWAN-WR2",
-      "longname": "clab-PV-DWAN-WR2",
-      "fqdn": "DWAN-WR2.PV.io",
+      "shortname": "Edge1-WR2",
+      "longname": "clab-PV-Edge1-WR2",
+      "fqdn": "Edge1-WR2.PV.io",
       "group": "",
-      "labdir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/DWAN-WR2",
+      "labdir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/Edge1-WR2",
       "kind": "arista_ceos",
       "image": "ceos:4.31.3M",
       "mgmt-net": "",
@@ -349,13 +349,13 @@
       "mgmt-ipv4-prefix-length": 12,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "00:1c:73:35:e2:8a",
+      "mac-address": "00:1c:73:a2:2f:93",
       "labels": {
-        "clab-mgmt-net-bridge": "br-6a4ce77d07de",
+        "clab-mgmt-net-bridge": "br-7fc744414737",
         "clab-node-group": "",
         "clab-node-kind": "arista_ceos",
-        "clab-node-lab-dir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/DWAN-WR2",
-        "clab-node-name": "DWAN-WR2",
+        "clab-node-lab-dir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/Edge1-WR2",
+        "clab-node-name": "Edge1-WR2",
         "clab-node-type": "",
         "clab-topo-file": "/home/holojinx/containerlab/Genesis-DevLab/PV/topo.yml",
         "containerlab": "PV"
@@ -363,13 +363,13 @@
       "port-bindings": [
       ]
     },
-    "VCOR-P3": {
+    "Edge2-P3": {
       "index": "12",
-      "shortname": "VCOR-P3",
-      "longname": "clab-PV-VCOR-P3",
-      "fqdn": "VCOR-P3.PV.io",
+      "shortname": "Edge2-P3",
+      "longname": "clab-PV-Edge2-P3",
+      "fqdn": "Edge2-P3.PV.io",
       "group": "",
-      "labdir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/VCOR-P3",
+      "labdir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/Edge2-P3",
       "kind": "arista_ceos",
       "image": "ceos:4.31.3M",
       "mgmt-net": "",
@@ -378,13 +378,13 @@
       "mgmt-ipv4-prefix-length": 12,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "00:1c:73:58:ec:c7",
+      "mac-address": "00:1c:73:9a:45:48",
       "labels": {
-        "clab-mgmt-net-bridge": "br-6a4ce77d07de",
+        "clab-mgmt-net-bridge": "br-7fc744414737",
         "clab-node-group": "",
         "clab-node-kind": "arista_ceos",
-        "clab-node-lab-dir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/VCOR-P3",
-        "clab-node-name": "VCOR-P3",
+        "clab-node-lab-dir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/Edge2-P3",
+        "clab-node-name": "Edge2-P3",
         "clab-node-type": "",
         "clab-topo-file": "/home/holojinx/containerlab/Genesis-DevLab/PV/topo.yml",
         "containerlab": "PV"
@@ -392,13 +392,13 @@
       "port-bindings": [
       ]
     },
-    "VCOR-P4": {
+    "Edge2-P4": {
       "index": "13",
-      "shortname": "VCOR-P4",
-      "longname": "clab-PV-VCOR-P4",
-      "fqdn": "VCOR-P4.PV.io",
+      "shortname": "Edge2-P4",
+      "longname": "clab-PV-Edge2-P4",
+      "fqdn": "Edge2-P4.PV.io",
       "group": "",
-      "labdir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/VCOR-P4",
+      "labdir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/Edge2-P4",
       "kind": "arista_ceos",
       "image": "ceos:4.31.3M",
       "mgmt-net": "",
@@ -407,13 +407,13 @@
       "mgmt-ipv4-prefix-length": 12,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "00:1c:73:cd:bc:a3",
+      "mac-address": "00:1c:73:21:54:4b",
       "labels": {
-        "clab-mgmt-net-bridge": "br-6a4ce77d07de",
+        "clab-mgmt-net-bridge": "br-7fc744414737",
         "clab-node-group": "",
         "clab-node-kind": "arista_ceos",
-        "clab-node-lab-dir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/VCOR-P4",
-        "clab-node-name": "VCOR-P4",
+        "clab-node-lab-dir": "/home/holojinx/containerlab/Genesis-DevLab/PV/clab-PV/Edge2-P4",
+        "clab-node-name": "Edge2-P4",
         "clab-node-type": "",
         "clab-topo-file": "/home/holojinx/containerlab/Genesis-DevLab/PV/topo.yml",
         "containerlab": "PV"
@@ -425,337 +425,337 @@
   "links": [
     {
       "a": {
-        "node": "DCOR-P1",
+        "node": "Edge1-P1",
         "interface": "eth3",
-        "mac": "aa:c1:ab:d8:94:2e",
+        "mac": "aa:c1:ab:53:48:e5",
         "peer": "z"
       },
       "z": {
-        "node": "VCOR-P3",
+        "node": "Edge2-P3",
         "interface": "eth1",
-        "mac": "aa:c1:ab:d5:3c:b3",
+        "mac": "aa:c1:ab:c4:3a:3e",
         "peer": "a"
       }
     },
     {
       "a": {
-        "node": "DCOR-P1",
+        "node": "Edge1-P1",
         "interface": "eth4",
-        "mac": "aa:c1:ab:7c:2d:5c",
+        "mac": "aa:c1:ab:03:0c:d6",
         "peer": "z"
       },
       "z": {
-        "node": "VCOR-P4",
+        "node": "Edge2-P4",
         "interface": "eth1",
-        "mac": "aa:c1:ab:95:d3:4c",
+        "mac": "aa:c1:ab:ef:57:0c",
         "peer": "a"
       }
     },
     {
       "a": {
-        "node": "DCOR-P2",
+        "node": "Edge1-P2",
         "interface": "eth3",
-        "mac": "aa:c1:ab:65:21:d7",
+        "mac": "aa:c1:ab:75:7f:22",
         "peer": "z"
       },
       "z": {
-        "node": "VCOR-P3",
+        "node": "Edge2-P3",
         "interface": "eth2",
-        "mac": "aa:c1:ab:6c:ae:0f",
+        "mac": "aa:c1:ab:4b:54:c3",
         "peer": "a"
       }
     },
     {
       "a": {
-        "node": "DCOR-P2",
+        "node": "Edge1-P2",
         "interface": "eth4",
-        "mac": "aa:c1:ab:fb:89:4f",
+        "mac": "aa:c1:ab:4f:b7:ab",
         "peer": "z"
       },
       "z": {
-        "node": "VCOR-P4",
+        "node": "Edge2-P4",
         "interface": "eth2",
-        "mac": "aa:c1:ab:1c:e1:91",
+        "mac": "aa:c1:ab:36:ec:c8",
         "peer": "a"
       }
     },
     {
       "a": {
-        "node": "DCOR-P1",
+        "node": "Edge1-P1",
         "interface": "eth11",
-        "mac": "aa:c1:ab:9f:c1:e3",
+        "mac": "aa:c1:ab:46:34:94",
         "peer": "z"
       },
       "z": {
-        "node": "DCOR-PE1",
+        "node": "Edge1-PE1",
         "interface": "eth1",
-        "mac": "aa:c1:ab:5b:a5:d4",
+        "mac": "aa:c1:ab:6a:8a:9d",
         "peer": "a"
       }
     },
     {
       "a": {
-        "node": "DCOR-P1",
+        "node": "Edge1-P1",
         "interface": "eth12",
-        "mac": "aa:c1:ab:f9:16:1d",
+        "mac": "aa:c1:ab:a9:cc:33",
         "peer": "z"
       },
       "z": {
-        "node": "DCOR-PE2",
+        "node": "Edge1-PE2",
         "interface": "eth1",
-        "mac": "aa:c1:ab:a1:60:12",
+        "mac": "aa:c1:ab:70:8e:50",
         "peer": "a"
       }
     },
     {
       "a": {
-        "node": "DCOR-P2",
+        "node": "Edge1-P2",
         "interface": "eth11",
-        "mac": "aa:c1:ab:0e:4a:76",
+        "mac": "aa:c1:ab:6a:cb:ae",
         "peer": "z"
       },
       "z": {
-        "node": "DCOR-PE1",
+        "node": "Edge1-PE1",
         "interface": "eth2",
-        "mac": "aa:c1:ab:67:f9:90",
+        "mac": "aa:c1:ab:29:e4:53",
         "peer": "a"
       }
     },
     {
       "a": {
-        "node": "DCOR-P2",
+        "node": "Edge1-P2",
         "interface": "eth12",
-        "mac": "aa:c1:ab:3f:a0:b0",
+        "mac": "aa:c1:ab:d5:51:73",
         "peer": "z"
       },
       "z": {
-        "node": "DCOR-PE2",
+        "node": "Edge1-PE2",
         "interface": "eth2",
-        "mac": "aa:c1:ab:12:b0:3f",
+        "mac": "aa:c1:ab:01:01:26",
         "peer": "a"
       }
     },
     {
       "a": {
-        "node": "DCOR-PE1",
+        "node": "Edge1-PE1",
         "interface": "eth23",
-        "mac": "aa:c1:ab:98:18:5a",
+        "mac": "aa:c1:ab:48:f7:03",
         "peer": "z"
       },
       "z": {
-        "node": "DFAB-LF3",
+        "node": "Edge1-LF3",
         "interface": "eth11",
-        "mac": "aa:c1:ab:95:15:88",
+        "mac": "aa:c1:ab:e9:76:14",
         "peer": "a"
       }
     },
     {
       "a": {
-        "node": "DCOR-PE1",
+        "node": "Edge1-PE1",
         "interface": "eth24",
-        "mac": "aa:c1:ab:69:05:ee",
+        "mac": "aa:c1:ab:0d:b8:44",
         "peer": "z"
       },
       "z": {
-        "node": "DFAB-LF4",
+        "node": "Edge1-LF4",
         "interface": "eth11",
-        "mac": "aa:c1:ab:2e:aa:4a",
+        "mac": "aa:c1:ab:ea:84:1c",
         "peer": "a"
       }
     },
     {
       "a": {
-        "node": "DCOR-PE2",
+        "node": "Edge1-PE2",
         "interface": "eth23",
-        "mac": "aa:c1:ab:0c:12:6a",
+        "mac": "aa:c1:ab:77:b5:6b",
         "peer": "z"
       },
       "z": {
-        "node": "DFAB-LF3",
+        "node": "Edge1-LF3",
         "interface": "eth12",
-        "mac": "aa:c1:ab:93:20:a8",
+        "mac": "aa:c1:ab:7c:f1:f3",
         "peer": "a"
       }
     },
     {
       "a": {
-        "node": "DCOR-PE2",
+        "node": "Edge1-PE2",
         "interface": "eth24",
-        "mac": "aa:c1:ab:5c:87:24",
+        "mac": "aa:c1:ab:00:57:88",
         "peer": "z"
       },
       "z": {
-        "node": "DFAB-LF4",
+        "node": "Edge1-LF4",
         "interface": "eth12",
-        "mac": "aa:c1:ab:58:2b:c2",
+        "mac": "aa:c1:ab:53:34:32",
         "peer": "a"
       }
     },
     {
       "a": {
-        "node": "DFAB-SP1",
+        "node": "Edge1-SP1",
         "interface": "eth21",
-        "mac": "aa:c1:ab:7a:26:08",
+        "mac": "aa:c1:ab:70:0e:bd",
         "peer": "z"
       },
       "z": {
-        "node": "DFAB-IR1",
+        "node": "Edge1-IR1",
         "interface": "eth251",
-        "mac": "aa:c1:ab:ba:4c:7e",
+        "mac": "aa:c1:ab:3d:ed:6f",
         "peer": "a"
       }
     },
     {
       "a": {
-        "node": "DFAB-SP1",
+        "node": "Edge1-SP1",
         "interface": "eth22",
-        "mac": "aa:c1:ab:05:52:1d",
+        "mac": "aa:c1:ab:0a:2c:c7",
         "peer": "z"
       },
       "z": {
-        "node": "DFAB-IR2",
+        "node": "Edge1-IR2",
         "interface": "eth251",
-        "mac": "aa:c1:ab:1c:79:ab",
+        "mac": "aa:c1:ab:b6:85:ec",
         "peer": "a"
       }
     },
     {
       "a": {
-        "node": "DFAB-SP1",
+        "node": "Edge1-SP1",
         "interface": "eth23",
-        "mac": "aa:c1:ab:e1:1d:c4",
+        "mac": "aa:c1:ab:05:1c:26",
         "peer": "z"
       },
       "z": {
-        "node": "DFAB-LF3",
+        "node": "Edge1-LF3",
         "interface": "eth251",
-        "mac": "aa:c1:ab:1c:fc:46",
+        "mac": "aa:c1:ab:6a:3a:72",
         "peer": "a"
       }
     },
     {
       "a": {
-        "node": "DFAB-SP1",
+        "node": "Edge1-SP1",
         "interface": "eth24",
-        "mac": "aa:c1:ab:a6:af:aa",
+        "mac": "aa:c1:ab:f0:7f:53",
         "peer": "z"
       },
       "z": {
-        "node": "DFAB-LF4",
+        "node": "Edge1-LF4",
         "interface": "eth251",
-        "mac": "aa:c1:ab:21:59:3c",
+        "mac": "aa:c1:ab:41:87:39",
         "peer": "a"
       }
     },
     {
       "a": {
-        "node": "DFAB-SP2",
+        "node": "Edge1-SP2",
         "interface": "eth21",
-        "mac": "aa:c1:ab:c4:d3:a8",
+        "mac": "aa:c1:ab:95:11:0a",
         "peer": "z"
       },
       "z": {
-        "node": "DFAB-IR1",
+        "node": "Edge1-IR1",
         "interface": "eth252",
-        "mac": "aa:c1:ab:2e:af:2d",
+        "mac": "aa:c1:ab:0f:d6:ae",
         "peer": "a"
       }
     },
     {
       "a": {
-        "node": "DFAB-SP2",
+        "node": "Edge1-SP2",
         "interface": "eth22",
-        "mac": "aa:c1:ab:78:34:10",
+        "mac": "aa:c1:ab:2c:3c:3b",
         "peer": "z"
       },
       "z": {
-        "node": "DFAB-IR2",
+        "node": "Edge1-IR2",
         "interface": "eth252",
-        "mac": "aa:c1:ab:f5:e9:8a",
+        "mac": "aa:c1:ab:bb:18:70",
         "peer": "a"
       }
     },
     {
       "a": {
-        "node": "DFAB-SP2",
+        "node": "Edge1-SP2",
         "interface": "eth23",
-        "mac": "aa:c1:ab:eb:1a:41",
+        "mac": "aa:c1:ab:19:a9:88",
         "peer": "z"
       },
       "z": {
-        "node": "DFAB-LF3",
+        "node": "Edge1-LF3",
         "interface": "eth252",
-        "mac": "aa:c1:ab:a6:6a:2b",
+        "mac": "aa:c1:ab:39:42:7a",
         "peer": "a"
       }
     },
     {
       "a": {
-        "node": "DFAB-SP2",
+        "node": "Edge1-SP2",
         "interface": "eth24",
-        "mac": "aa:c1:ab:23:06:d8",
+        "mac": "aa:c1:ab:bb:ac:32",
         "peer": "z"
       },
       "z": {
-        "node": "DFAB-LF4",
+        "node": "Edge1-LF4",
         "interface": "eth252",
-        "mac": "aa:c1:ab:06:f8:ae",
+        "mac": "aa:c1:ab:95:56:e9",
         "peer": "a"
       }
     },
     {
       "a": {
-        "node": "DFAB-IR1",
+        "node": "Edge1-IR1",
         "interface": "eth101",
-        "mac": "aa:c1:ab:28:b0:ef",
+        "mac": "aa:c1:ab:bf:de:b9",
         "peer": "z"
       },
       "z": {
-        "node": "DWAN-WR1",
+        "node": "Edge1-WR1",
         "interface": "eth21",
-        "mac": "aa:c1:ab:82:e0:39",
+        "mac": "aa:c1:ab:47:d3:5d",
         "peer": "a"
       }
     },
     {
       "a": {
-        "node": "DFAB-IR1",
+        "node": "Edge1-IR1",
         "interface": "eth102",
-        "mac": "aa:c1:ab:9e:c6:e7",
+        "mac": "aa:c1:ab:3e:26:ed",
         "peer": "z"
       },
       "z": {
-        "node": "DWAN-WR2",
+        "node": "Edge1-WR2",
         "interface": "eth21",
-        "mac": "aa:c1:ab:c7:e4:f6",
+        "mac": "aa:c1:ab:8c:e6:bc",
         "peer": "a"
       }
     },
     {
       "a": {
-        "node": "DFAB-IR2",
+        "node": "Edge1-IR2",
         "interface": "eth101",
-        "mac": "aa:c1:ab:c4:35:14",
+        "mac": "aa:c1:ab:35:dd:c2",
         "peer": "z"
       },
       "z": {
-        "node": "DWAN-WR1",
+        "node": "Edge1-WR1",
         "interface": "eth22",
-        "mac": "aa:c1:ab:1d:99:01",
+        "mac": "aa:c1:ab:75:d2:12",
         "peer": "a"
       }
     },
     {
       "a": {
-        "node": "DFAB-IR2",
+        "node": "Edge1-IR2",
         "interface": "eth102",
-        "mac": "aa:c1:ab:17:6e:73",
+        "mac": "aa:c1:ab:71:c5:7b",
         "peer": "z"
       },
       "z": {
-        "node": "DWAN-WR2",
+        "node": "Edge1-WR2",
         "interface": "eth22",
-        "mac": "aa:c1:ab:2c:de:e9",
+        "mac": "aa:c1:ab:d8:7b:db",
         "peer": "a"
       }
     }

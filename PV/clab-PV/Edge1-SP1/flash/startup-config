@@ -1,0 +1,44 @@
+! Startup-config last modified at Mon Jun 10 02:37:39 2024 by root
+! device: Edge1-SP1 (cEOSLab, EOS-4.31.3M-36737551.4313M (engineering build))
+!
+no aaa root
+!
+username admin privilege 15 role network-admin secret sha512 $6$W/qk/cIf.K/vq8uz$tYgbTpb6S82/qkNW1wsfp.bL8R6nJLqH9Un7FgAwD2.GgD4QTra4Ij4ynPigyz3JK8p3IWxkTqicOYCUTgn5F.
+!
+transceiver qsfp default-mode 4x10G
+!
+service routing protocols model multi-agent
+!
+hostname Edge1-SP1
+!
+spanning-tree mode mstp
+!
+system l1
+   unsupported speed action error
+   unsupported error-correction action error
+!
+management api http-commands
+   no shutdown
+!
+management api gnmi
+   transport grpc default
+!
+management api netconf
+   transport ssh default
+!
+interface Ethernet21
+!
+interface Ethernet22
+!
+interface Ethernet23
+!
+interface Ethernet24
+!
+interface Management0
+   ip address 10.1.1.251/12
+!
+no ip routing
+!
+ip route 0.0.0.0/0 10.0.0.1
+!
+end

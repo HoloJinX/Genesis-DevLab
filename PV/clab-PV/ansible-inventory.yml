@@ -11,31 +11,31 @@ all:
         ansible_user: admin
         ansible_password: admin
       hosts:
-        clab-PV-DCOR-P1:
-          ansible_host: 10.1.0.1
-        clab-PV-DCOR-P2:
-          ansible_host: 10.1.0.2
-        clab-PV-DCOR-PE1:
-          ansible_host: 10.1.0.11
-        clab-PV-DCOR-PE2:
-          ansible_host: 10.1.0.12
-        clab-PV-DFAB-IR1:
+        clab-PV-Edge1-IR1:
           ansible_host: 10.1.1.21
-        clab-PV-DFAB-IR2:
+        clab-PV-Edge1-IR2:
           ansible_host: 10.1.1.22
-        clab-PV-DFAB-LF3:
+        clab-PV-Edge1-LF3:
           ansible_host: 10.1.1.23
-        clab-PV-DFAB-LF4:
+        clab-PV-Edge1-LF4:
           ansible_host: 10.1.1.24
-        clab-PV-DFAB-SP1:
+        clab-PV-Edge1-P1:
+          ansible_host: 10.1.0.1
+        clab-PV-Edge1-P2:
+          ansible_host: 10.1.0.2
+        clab-PV-Edge1-PE1:
+          ansible_host: 10.1.0.11
+        clab-PV-Edge1-PE2:
+          ansible_host: 10.1.0.12
+        clab-PV-Edge1-SP1:
           ansible_host: 10.1.1.251
-        clab-PV-DFAB-SP2:
+        clab-PV-Edge1-SP2:
           ansible_host: 10.1.1.252
-        clab-PV-DWAN-WR1:
+        clab-PV-Edge1-WR1:
           ansible_host: 10.1.2.101
-        clab-PV-DWAN-WR2:
+        clab-PV-Edge1-WR2:
           ansible_host: 10.1.2.102
-        clab-PV-VCOR-P3:
+        clab-PV-Edge2-P3:
           ansible_host: 10.1.0.3
-        clab-PV-VCOR-P4:
+        clab-PV-Edge2-P4:
           ansible_host: 10.1.0.4
