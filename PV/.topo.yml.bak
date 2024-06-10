@@ -18,13 +18,15 @@ topology:
     Edge2-P3:
       kind: arista_ceos
       image: ceos:4.31.3M
-      mgmt-ipv4: 10.1.0.3
+      mgmt-ipv4: 10.2.0.3
     Edge2-P4:
       kind: arista_ceos
       image: ceos:4.31.3M
-      mgmt-ipv4: 10.1.0.4
+      mgmt-ipv4: 10.2.0.4
 
-# D CORE PEs
+### EDGE1 ###
+
+# EDGE1 CORE PEs
     Edge1-PE1:
       kind: arista_ceos
       image: ceos:4.31.3M
@@ -34,7 +36,7 @@ topology:
       image: ceos:4.31.3M
       mgmt-ipv4: 10.1.0.12
       
-# D EDGE FABRIC
+# EDGE1 FABRIC
     Edge1-SP1:
       kind: arista_ceos
       image: ceos:4.31.3M
@@ -60,7 +62,7 @@ topology:
       image: ceos:4.31.3M
       mgmt-ipv4: 10.1.1.24
 
-# D WAN EDGE
+# EDGE1 WAN
     Edge1-WR1:
       kind: arista_ceos
       image: ceos:4.31.3M
@@ -70,28 +72,76 @@ topology:
       image: ceos:4.31.3M
       mgmt-ipv4: 10.1.2.102
 
+### EDGE2 ###
+
+# EDGE2 CORE PEs
+    Edge2-PE1:
+      kind: arista_ceos
+      image: ceos:4.31.3M
+      mgmt-ipv4: 10.2.0.11
+    Edge2-PE2:
+      kind: arista_ceos
+      image: ceos:4.31.3M
+      mgmt-ipv4: 10.2.0.12
+      
+# EDGE2 FABRIC
+    Edge2-SP1:
+      kind: arista_ceos
+      image: ceos:4.31.3M
+      mgmt-ipv4: 10.2.1.251
+    Edge2-SP2:
+      kind: arista_ceos
+      image: ceos:4.31.3M
+      mgmt-ipv4: 10.2.1.252
+    Edge2-IR1:
+      kind: arista_ceos
+      image: ceos:4.31.3M
+      mgmt-ipv4: 10.2.1.21
+    Edge2-IR2:
+      kind: arista_ceos
+      image: ceos:4.31.3M
+      mgmt-ipv4: 10.2.1.22
+    Edge2-LF3:
+      kind: arista_ceos
+      image: ceos:4.31.3M
+      mgmt-ipv4: 10.2.1.23
+    Edge2-LF4:
+      kind: arista_ceos
+      image: ceos:4.31.3M
+      mgmt-ipv4: 10.2.1.24
+
+# EDGE2 WAN
+    Edge2-WR1:
+      kind: arista_ceos
+      image: ceos:4.31.3M
+      mgmt-ipv4: 10.2.2.101
+    Edge2-WR2:
+      kind: arista_ceos
+      image: ceos:4.31.3M
+      mgmt-ipv4: 10.2.2.102
+
   links:
 
-# Edge1 P to Edge2 P
+# EDGE1 P to EDGE2 P
     - endpoints: ["Edge1-P1:eth3", "Edge2-P3:eth1"]
     - endpoints: ["Edge1-P1:eth4", "Edge2-P4:eth1"]
     - endpoints: ["Edge1-P2:eth3", "Edge2-P3:eth2"]
     - endpoints: ["Edge1-P2:eth4", "Edge2-P4:eth2"]
 
 
-# Edge1 P to PE
+# EDGE1 P to PE
     - endpoints: ["Edge1-P1:eth11", "Edge1-PE1:eth1"]
     - endpoints: ["Edge1-P1:eth12", "Edge1-PE2:eth1"]
     - endpoints: ["Edge1-P2:eth11", "Edge1-PE1:eth2"]
     - endpoints: ["Edge1-P2:eth12", "Edge1-PE2:eth2"]
 
-# Edge1 PE to LF
+# EDGE1 PE to LF
     - endpoints: ["Edge1-PE1:eth23", "Edge1-LF3:eth11"]
     - endpoints: ["Edge1-PE1:eth24", "Edge1-LF4:eth11"]
     - endpoints: ["Edge1-PE2:eth23", "Edge1-LF3:eth12"]
     - endpoints: ["Edge1-PE2:eth24", "Edge1-LF4:eth12"]
 
-# Edge1 SP to LF/IR
+# EDGE1 SP to LF/IR
     - endpoints: ["Edge1-SP1:eth21", "Edge1-IR1:eth251"]
     - endpoints: ["Edge1-SP1:eth22", "Edge1-IR2:eth251"]
     - endpoints: ["Edge1-SP1:eth23", "Edge1-LF3:eth251"]
@@ -101,8 +151,36 @@ topology:
     - endpoints: ["Edge1-SP2:eth23", "Edge1-LF3:eth252"]
     - endpoints: ["Edge1-SP2:eth24", "Edge1-LF4:eth252"]
 
-# Edge1 IR to WR
+# EDGE1 FABRIC to WAN
     - endpoints: ["Edge1-IR1:eth101", "Edge1-WR1:eth21"]
     - endpoints: ["Edge1-IR1:eth102", "Edge1-WR2:eth21"]
     - endpoints: ["Edge1-IR2:eth101", "Edge1-WR1:eth22"]
     - endpoints: ["Edge1-IR2:eth102", "Edge1-WR2:eth22"]
+
+# EDGE2 P to PE
+    - endpoints: ["Edge2-P1:eth11", "Edge2-PE1:eth1"]
+    - endpoints: ["Edge2-P1:eth12", "Edge2-PE2:eth1"]
+    - endpoints: ["Edge2-P2:eth11", "Edge2-PE1:eth2"]
+    - endpoints: ["Edge2-P2:eth12", "Edge2-PE2:eth2"]
+
+# EDGE2 PE to LF
+    - endpoints: ["Edge2-PE1:eth23", "Edge2-LF3:eth11"]
+    - endpoints: ["Edge2-PE1:eth24", "Edge2-LF4:eth11"]
+    - endpoints: ["Edge2-PE2:eth23", "Edge2-LF3:eth12"]
+    - endpoints: ["Edge2-PE2:eth24", "Edge2-LF4:eth12"]
+
+# EDGE2 SP to LF/IR
+    - endpoints: ["Edge2-SP1:eth21", "Edge2-IR1:eth251"]
+    - endpoints: ["Edge2-SP1:eth22", "Edge2-IR2:eth251"]
+    - endpoints: ["Edge2-SP1:eth23", "Edge2-LF3:eth251"]
+    - endpoints: ["Edge2-SP1:eth24", "Edge2-LF4:eth251"]
+    - endpoints: ["Edge2-SP2:eth21", "Edge2-IR1:eth252"]
+    - endpoints: ["Edge2-SP2:eth22", "Edge2-IR2:eth252"]
+    - endpoints: ["Edge2-SP2:eth23", "Edge2-LF3:eth252"]
+    - endpoints: ["Edge2-SP2:eth24", "Edge2-LF4:eth252"]
+
+# EDGE2 FABRIC to WAN
+    - endpoints: ["Edge2-IR1:eth101", "Edge2-WR1:eth21"]
+    - endpoints: ["Edge2-IR1:eth102", "Edge2-WR2:eth21"]
+    - endpoints: ["Edge2-IR2:eth101", "Edge2-WR1:eth22"]
+    - endpoints: ["Edge2-IR2:eth102", "Edge2-WR2:eth22"]

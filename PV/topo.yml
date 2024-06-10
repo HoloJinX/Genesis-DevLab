@@ -158,10 +158,10 @@ topology:
     - endpoints: ["Edge1-IR2:eth102", "Edge1-WR2:eth22"]
 
 # EDGE2 P to PE
-    - endpoints: ["Edge2-P1:eth11", "Edge2-PE1:eth1"]
-    - endpoints: ["Edge2-P1:eth12", "Edge2-PE2:eth1"]
-    - endpoints: ["Edge2-P2:eth11", "Edge2-PE1:eth2"]
-    - endpoints: ["Edge2-P2:eth12", "Edge2-PE2:eth2"]
+    - endpoints: ["Edge2-P3:eth11", "Edge2-PE1:eth3"]
+    - endpoints: ["Edge2-P3:eth12", "Edge2-PE2:eth3"]
+    - endpoints: ["Edge2-P4:eth11", "Edge2-PE1:eth4"]
+    - endpoints: ["Edge2-P4:eth12", "Edge2-PE2:eth4"]
 
 # EDGE2 PE to LF
     - endpoints: ["Edge2-PE1:eth23", "Edge2-LF3:eth11"]
